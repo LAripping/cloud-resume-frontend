@@ -95,3 +95,18 @@ ul {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+footer {
+    text-align: center;
+    /* display: unset; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkgrey;
+    font-style: oblique;
+}
+
+.visit-counter {
+    display: inline;
+    padding: 0.3em;
+}
