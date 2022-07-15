@@ -1,19 +1,26 @@
 var counterContainer = document.querySelector(".visit-counter");
 
+/////// v1.0 : DynamoDB datastore 
+fetch('https://7gzjw3zz9a.execute-api.eu-west-2.amazonaws.com/fetch-update-visitor-count')
+  .then(response => {
+    if(!response.ok) {
+      error('');
+    }
+    return response.json();
+  })
+  .then(respj => {
+    if( !('visitors' in respj) ){
+      error('');
+    }
+    counterContainer.innerHTML = respj.visitors;
+  })
+  .catch(e => {
+    error(e)
+  })
 
-/////// v0.1 / pre-step8 : Local Storage datastore
-var visitCount = localStorage.getItem("page_view");
-
-/////// v1.0 : DynamoDB datastore TODO
-
-
-// Check if page_view entry is present
-if (visitCount) {
-  visitCount = Number(visitCount) + 1;
-  localStorage.setItem("page_view", visitCount);
-} else {
-  visitCount = 1;
-  localStorage.setItem("page_view", 1);
+function error(e) {
+  alert('Visitors API call failed!');
+  if(e){
+    throw e;
+  }
 }
-counterContainer.innerHTML = visitCount;
-
