@@ -20,4 +20,4 @@ jobs:
       - name: S3 Sync
         run: aws s3 sync . s3://cloud-resume-laripping --exclude ".*"
       - name: Invalidate Cloudfront Caches
-        run: aws cloudfront create-invalidation --distribution-id E6HWW76UUKEQD --paths '/*';"
+        run: aws cloudfront create-invalidation --distribution-id E6HWW76UUKEQD --paths "/*"
