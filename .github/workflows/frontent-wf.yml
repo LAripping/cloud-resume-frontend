@@ -18,7 +18,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-2
       - name: S3 Sync
-        run: aws s3 sync . s3://cloud-resume-laripping
+        run: aws s3 sync . s3://cloud-resume-laripping --exclude ".*"
 
 
         # aws cloudfront create-invalidation --distribution-id E5FDMTLPHUTLTL --paths '/*';"
