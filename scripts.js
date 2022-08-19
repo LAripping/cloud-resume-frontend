@@ -1,7 +1,7 @@
 var counterContainer = document.querySelector(".visit-counter");
 
-/////// v1.0 : DynamoDB datastore 
-fetch('https://7gzjw3zz9a.execute-api.eu-west-2.amazonaws.com/fetch-update-visitor-count')
+/////// v2.0 : SAM API  
+fetch('https://bxmqz5pjl0.execute-api.eu-west-2.amazonaws.com/Prod/fetch-update-visitor-count')
   .then(response => {
     if(!response.ok) {
       error('');
