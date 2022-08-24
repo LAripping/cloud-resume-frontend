@@ -1,21 +1,25 @@
 <html lang="en-gb">
-    <head>
-        <title>HTML Resume</title>
-        
-        <link rel="stylesheet" href="styles.css">
-        <link rel="shortcut icon" href="https://laripping.com/favicon.ico">
-        <script defer src="scripts.js"></script>
-    </head>
-    <body>
+<head>
+    <title>HTML Resume</title>
     
-
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://laripping.com/favicon.ico">
+    <script defer src="api.js"></script>
+    <script defer src="menu.js"></script>
+    
+    <!-- TODO delete after we add our own icons  -->
+    <script src="https://kit.fontawesome.com/411dbbc169.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    
     <header>
-
+        
         <div id="title">
             <p class="name">Leo Tsaousis</p>
             <p class="subtitle">Security Consultant / Security Researcher</p>
         </div>
-
+        
         <div id="contact">
             <img src="https://img.icons8.com/ios/452/gmail--v1.png"/> <a href="mailto:leo.tsaou@gmail.com">leo.tsaou@gmail.com</a>
             <br/>
@@ -24,34 +28,63 @@
             <img src="https://img.icons8.com/sf-ultralight/344/github.png"/> <a href="https://github.com/LAripping">github.com/LAripping</a>
         </div>
     </header>
-
+    
     <main>
-
+        
+        <div id="ssb-container" class="ssb-btns-right ssb-anim-slide ssb-disable-on-mobile" style="z-index: 1; right: -119px;">
+            <ul class="ssb-light-hover">
+                <li id="ssb-btn-2">
+                    <p>
+                        <a href="tel:12345678"><span class="fas fa-phone"></span> Phone</a>
+                    </p>
+                </li>
+                <li id="ssb-btn-1">
+                    <p>
+                        <a href="mailto:joe@gmail.com"><span class="fas fa-envelope"></span> joe@gmail.com</a>
+                    </p>
+                </li>
+                <li id="ssb-btn-3">
+                    <p>
+                        <a href="https://maps.google.com" target="_blank"><span class="fas fa-map-marker"></span> Store Locations</a>
+                    </p>
+                </li>
+                <li class="ssb-share-btn">
+                    <p>
+                        <a href="#"><span class="fas fa-share-alt"></span> Social Share                                     </a>
+                    </p>
+                    <div class="ssb-social-popup">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://demo.enigmaweb.com.au/" onclick="window.open(this.href, 'facebook', 'left=60,top=40,width=500,height=500,toolbar=1,resizable=0'); return false;"><span class="fab fa-facebook-f"></span> Facebook</a>
+                        <a href="https://twitter.com/home?status=https://demo.enigmaweb.com.au/" onclick="window.open(this.href, 'twitter', 'left=60,top=40,width=500,height=500,toolbar=1,resizable=0'); return false;"><span class="fab fa-twitter"></span> Twitter</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
         <p class="section">Summary</p>
         <hr/>
-    
+        
         <p class="dateditem">Information security professional with over 5 years of experience in the industry. Always seeking new challenges and opportunities to escape the comfort zone.<br/>Confident in delivering and leading security assessments across the entire attack surface of a given target, both individually or as part of a team. Combining technical expertise and a consulting skillset to best advise on how to protect and defend digital infrastructure. <br/> Keen on performing in-depth technical research, which has resulted in the discovery of several significant vulnerabilities against major vendors and reputable organisations, published and awarded with CVE IDs.</p>
         
         <p class="section">Certifications</p>
         <hr/>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 4/2021
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">Offensive Security Experienced Penetration Tester (OSEP) - </p>
                 <p class="hl">by Offensive Security</p> 
                 <p>Certificate ID: OSEP-26733</p>
             </div>
         </div>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 1/2019
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">Offensive Security Certified Professional (OSCP) - </p>
                 <p class="hl">by Offensive Security</p> 
@@ -62,12 +95,12 @@
         
         <p class="section">Experience</p>
         <hr/>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 3/2022-8/2022
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">Hellenic Army - </p>
                 <p class="hl">Hellenic Ministry of Defence</p> 
@@ -88,7 +121,7 @@
             <div class="daterange">
                 9/2019-8/2021
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">F-Secure Consulting (MWR Infosecurity) - </p>
                 <p class="hl">Manchester, United Kingdom</p> 
@@ -108,12 +141,12 @@
             </div>
             
         </div>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 3/2017-7/2019
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">NSO Group (CS Circles) - </p>
                 <p class="hl">Limassol, Cyprus</p> 
@@ -129,12 +162,12 @@
                 </ul>
             </div>
         </div>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 7/2016-2/2017
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">Intracom Telecom - </p>
                 <p class="hl">Athens, Greece</p> 
@@ -149,21 +182,21 @@
                     <li>Wrote Bash and Puppet scripts to automate the working environment setup</li>
                 </ul>
             </div>
-    
+            
         </div>
         
-    
-    
+        
+        
         <p class="section">Education</p>
         <hr/>
-    
-    
-    
+        
+        
+        
         <div class="item-with-date">
             <div class="daterange">
                 2012-2017
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">University of Athens (BSc)</p>
                 <br/>
@@ -177,12 +210,12 @@
                 </ul>
             </div>
         </div>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 7/2022
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">Antisyphon Training</p> (3 day training) -
                 <p class="hl">Online/Remote</p>
@@ -190,12 +223,12 @@
                 <p>"SOC Core Skills with John Strand"</p>
             </div>
         </div>
-       
+        
         <div class="item-with-date">
             <div class="daterange">
                 6/2019
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">Hack in Paris Trainings</p> (3 day training) -
                 <p class="hl">Paris, FR</p>
@@ -203,12 +236,12 @@
                 <p>"Hacking IPv6 Networks"</p>
             </div>
         </div>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 5/2018
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">CanSecWest Dojos</p> (2 day training) -
                 <p class="hl">Vancouver, CA</p>
@@ -216,12 +249,12 @@
                 <p>"Reversing for the JVM and Android"</p>
             </div>
         </div>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 9/2017
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">Systems and Networks Training Ltd</p> (2 day training) -
                 <p class="hl">Limassol, CY</p>
@@ -229,12 +262,12 @@
                 <p>"Radio Frequency Fundamentals"</p>
             </div>
         </div>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 3/2016
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">Intracom Telecom & EESTEC LC Athens</p> (3 day training) -
                 <p class="hl">Athens, GR</p>
@@ -243,16 +276,16 @@
             </div>
         </div>
         
-    
+        
         <p class="section">Publications</p>
         <hr/>
-    
-    
+        
+        
         <div class="item-with-date">
             <div class="daterange">
                 CVE-2021-22268<br/>CVE-2021-22269<br/>CVE-2021-22270<br/>CVE-2021-22271
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">"Click Here For Free TV! - Chaining Bugs to Takeover Wind Vision Accounts"</p>
                 <ul>
@@ -261,12 +294,12 @@
                 </ul>
             </div>
         </div>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 CVE-2020-26062<br/>CVE-2020-26063
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">Cisco IMC Server - Authorisation Bypass and Username Enumeration</p>
                 <ul>
@@ -274,12 +307,12 @@
                 </ul>
             </div>
         </div>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 N/A
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">Xiaomi Redmi 5 Plus - Second Space Password Bypass</p>
                 <ul>
@@ -288,16 +321,16 @@
                 </ul>
             </div>
         </div>
-    
-    
+        
+        
         <p class="section">Languages</p>
         <hr/>
-    
+        
         <div class="item-with-date">
             <div class="daterange">
                 5/2010
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">English</p> - Excellent / Near-Native Level
                 <br/>
@@ -305,13 +338,13 @@
                 <p class="hl">The University of Michigan</p>
             </div>
         </div>
-    
-    
+        
+        
         <div class="item-with-date">
             <div class="daterange">
                 6/2010
             </div>
-    
+            
             <div class="dateditem">
                 <p class="b">German</p> - Intermediate Level
                 <br/>
@@ -319,23 +352,23 @@
                 <p class="hl">Goethe Institut Athen</p>
             </div>
         </div>
-    
+        
         <div class="item-with-date">
             <div class="daterange"></div>
-    
+            
             <div class="dateditem">
                 <p class="b">Greek</p> - Native Languange
             </div>
         </div>
-    
+        
     </main>
-
     
-
+    
+    
     <footer>
         <p>This page has been visited <div class="visit-counter">...</div> times</p>
     </footer>
-
-
-    </body>
+    
+    
+</body>
 </html>
