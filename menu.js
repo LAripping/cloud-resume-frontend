@@ -61,3 +61,45 @@ function slide(dir){
         ssb_panel.style.right = offset;
    }
 }
+
+// this is not working as intended... 
+function downloadPDF_pdfjs(){
+    // Default export is a4 paper, portrait, using millimeters for units
+    var pdf = new jsPDF();
+    var html = document.querySelectorAll('html')[0]
+
+    specialElementHandlers = {
+        // element with id of "bypass" - jQuery style selector
+        '#bypassme': function (element, renderer) {
+            // true = "handled elsewhere, bypass text extraction"
+            return true
+        }
+    };
+
+    pdf.fromHTML(html.innerHTML, 15, 15, {
+        'width': 800,
+        'elementHandlers': specialElementHandlers
+    });
+    setTimeout(function(){
+        pdf.save('Leonidas-Tsaousis-CV.pdf');
+    },2000);
+}
+
+// https://stackoverflow.com/a/22695248
+function downloadPDF_printUI(){
+    var iframe = this._printIframe;
+    if (!this._printIframe) {
+      iframe = this._printIframe = document.createElement('iframe');
+      document.body.appendChild(iframe);
+  
+      iframe.style.display = 'none';
+      iframe.onload = function() {
+        setTimeout(function() {
+          iframe.focus();
+          iframe.contentWindow.print();
+        }, 1);
+      };
+    }
+  
+    iframe.src = document.location.href;
+}
