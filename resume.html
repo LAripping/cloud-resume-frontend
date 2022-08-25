@@ -7,7 +7,6 @@
     <script defer src="api.js"></script>
     <script defer src="menu.js"></script>
     
-    <!-- TODO delete after we add our own icons  -->
     <script src="https://kit.fontawesome.com/411dbbc169.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -33,29 +32,36 @@
         
         <div id="ssb-container" class="ssb-btns-right ssb-anim-slide ssb-disable-on-mobile" style="z-index: 1; right: -119px;">
             <ul class="ssb-light-hover">
-                <li id="ssb-btn-2">
-                    <p>
-                        <a href="tel:12345678"><span class="fas fa-phone"></span> Phone</a>
-                    </p>
+                <li class="ssb-btn">
+                    <a href="#">
+                        <table class="ssb-table">
+                            <td><span class="fa-solid fa-angle-up"></span></td>  
+                            <td><p>Back to top</p></td>
+                        </table>
+                    </a>
                 </li>
-                <li id="ssb-btn-1">
-                    <p>
-                        <a href="mailto:joe@gmail.com"><span class="fas fa-envelope"></span> joe@gmail.com</a>
-                    </p>
+                <li class="ssb-btn">
+                    <a href="#">
+                        <table class="ssb-table">
+                            <!-- <td><span class="fa-solid fa-file-pdf"></span></td>   -->
+                            <td><span class="fa-solid fa-floppy-disk"></span></td>  
+                            <td><p>Download as PDF</p></td>
+                        </table>
+                    </a>
                 </li>
-                <li id="ssb-btn-3">
-                    <p>
-                        <a href="https://maps.google.com" target="_blank"><span class="fas fa-map-marker"></span> Store Locations</a>
-                    </p>
+                <li class="ssb-btn">
+                        <table class="ssb-table">
+                            <td><span class="fa-solid fa-eye"></span></td>  
+                            <td><p class="viewer-btn">This page has been <br/> visited<div class="visit-counter">...</div>times</p></td>
+                        </table>
                 </li>
-                <li class="ssb-share-btn">
-                    <p>
-                        <a href="#"><span class="fas fa-share-alt"></span> Social Share                                     </a>
-                    </p>
-                    <div class="ssb-social-popup">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://demo.enigmaweb.com.au/" onclick="window.open(this.href, 'facebook', 'left=60,top=40,width=500,height=500,toolbar=1,resizable=0'); return false;"><span class="fab fa-facebook-f"></span> Facebook</a>
-                        <a href="https://twitter.com/home?status=https://demo.enigmaweb.com.au/" onclick="window.open(this.href, 'twitter', 'left=60,top=40,width=500,height=500,toolbar=1,resizable=0'); return false;"><span class="fab fa-twitter"></span> Twitter</a>
-                    </div>
+                <li class="ssb-btn">
+                    <a href="https://laripping.com/blog-posts/2022/08/25/cloud-resume-challenge.html">
+                        <table class="ssb-table">
+                            <td><span class="fa-solid fa-cloud"></span></td>  
+                            <td><p>Created as part of the<br/>"Cloud Resume Challenge"</p></td>
+                        </table>
+                    </a>                    
                 </li>
             </ul>
         </div>

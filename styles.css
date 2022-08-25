@@ -111,6 +111,9 @@ footer {
     padding: 0.3em;
 }
 
+.viewer-btn {
+    display:inline;
+}
 
 /* SSB UI Style */
 #ssb-container {
@@ -192,14 +195,7 @@ footer {
     display: block;
 }
 
-.ssb-social-popup {
-    position: absolute;
-    top: 100%;
-    left: 100%;
-    margin: 0 0 0 -50px;
-    width: 155px;
-    display: none;
-}
+
 
 #ssb-container.ssb-btns-right .ssb-social-popup {
     right: -100%;
@@ -224,13 +220,13 @@ width > 768:    Expand normally
 }
 
 
-#ssb-btn-2{background: #1b2748;}
-#ssb-btn-2:hover{background:rgba(27,39,72,0.9);}
-#ssb-btn-2 a{color: #ffffff;}
-.ssb-share-btn,.ssb-share-btn .ssb-social-popup{background:#1b2748;color:#ffffff}.ssb-share-btn:hover{background:rgba(27,39,72,0.9);}.ssb-share-btn a{color:#ffffff !important;}#ssb-btn-1{background: #25355f;}
-#ssb-btn-1:hover{background:rgba(37,53,95,0.9);}
-#ssb-btn-1 a{color: #ffffff;}
-#ssb-btn-3{background: #1b2748;}
-#ssb-btn-3:hover{background:rgba(27,39,72,0.9);}
-#ssb-btn-3 a{color: #ffffff;}
-
+.ssb-btn{
+    background:rgb(100, 0, 0);
+    color: #ffffff;
+}
+.ssb-btn:hover{
+    background:rgba(180,0,0,0.6);
+}
+.ssb-table{
+    color: #ffffff;
+}
