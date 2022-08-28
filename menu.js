@@ -62,7 +62,7 @@ function slide(dir){
    }
 }
 
-// this is not working as intended... 
+// Limitations: doesn't include CSS by default
 function downloadPDF_pdfjs(){
     // Default export is a4 paper, portrait, using millimeters for units
     var pdf = new jsPDF();
@@ -86,6 +86,7 @@ function downloadPDF_pdfjs(){
 }
 
 // https://stackoverflow.com/a/22695248
+// Limitations: Not actually a PDF download, doesn't work in FF
 function downloadPDF_printUI(){
     var iframe = this._printIframe;
     if (!this._printIframe) {
@@ -102,4 +103,37 @@ function downloadPDF_printUI(){
     }
   
     iframe.src = document.location.href;
+}
+
+// https://ekoopmans.github.io/html2pdf.js/
+// Limitations: Not selectable/searchable text... but otherwise best solution!
+function downloadPDF_html2pdf(){
+    const loader = document.querySelectorAll('.loader')[0]
+    loader.style.display = 'block'
+
+    const element = document.querySelector('body');
+    const elementToIgnore = document.querySelector('#ssb-container');
+    var opt = {
+        margin:       [2, 0],
+        filename:     'Leonidas-Tsaousis-CV.pdf',
+        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] },
+        enableLinks:  true,
+        image:        { type: 'png' },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'em', format: 'a4', orientation: 'portrait' }
+      };
+    var worker = html2pdf().set(opt).from(element).save();
+    // var worker = html2pdf().from(element).toContainer().toCanvas().toImg().toPdf().save()
+
+    
+    worker.then( 
+        function onFullfilled(){
+            loader.style.display = 'none'
+            console.log('html2pdf done!')
+        },
+        function onRejected(){
+            loader.style.display = 'none'
+            console.error('html2pdf error!')
+        }
+    )
 }

@@ -22,7 +22,8 @@ Ensure you're running Python3.8 (e.g. using [pyenv](https://github.com/pyenv/pye
 
 ```bash
 pip3 install httpwatcher
-httpwatcher --root .
+httpwatcher --root . 
+# or pyenv exec httpwatcher --root . 
 # visit http://localhost:5555/resume.html
 ```
 
