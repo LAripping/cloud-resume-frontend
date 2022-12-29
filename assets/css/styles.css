@@ -161,6 +161,13 @@ footer {
     display: inline-block;
 }
 
+#ssb-container ul li img {
+    line-height: 45px;
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
 
 #ssb-container ul li a:hover {
     text-decoration: none;
@@ -221,7 +228,7 @@ width > 768:    Expand normally
 
 
 .ssb-btn{
-    background:rgb(64,64,178);
+    background:rgb(62,62,172);
     color: #ffffff;
 }
 .ssb-btn:hover{
@@ -235,7 +242,7 @@ width > 768:    Expand normally
  /* Print PDF Loader */
  .loader {
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid rgb(64,64,178); 
+    border-top: 16px solid rgb(62,62,172); 
     border-radius: 50%;
     width: 120px;
     height: 120px;
