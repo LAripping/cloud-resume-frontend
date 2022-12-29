@@ -1,7 +1,7 @@
 var counterContainer = document.querySelector(".visit-counter");
 
 /////// v2.0 : SAM API  
-fetch('https://bxmqz5pjl0.execute-api.eu-west-2.amazonaws.com/Prod/fetch-update-visitor-count')
+fetch('https://j1lypec46k.execute-api.eu-west-2.amazonaws.com/Prod/fetch-update-visitor-count')
   .then(response => {
     if(!response.ok) {
       error('');
